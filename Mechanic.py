@@ -1,4 +1,3 @@
-import datetime
 
 class Person:   
     def __init__(self, name, driversLicense):
@@ -26,13 +25,6 @@ class Client(Person):
     def addCar(self, car):
         self.ownCars[car.noPlate] = car
        
-class Car: 
-    def __init__(self, carColour, carBodyType, noPlate, buildDate,):
-        self.carColour = carColour
-        self.carBodyType = carBodyType
-        self.noPlate = noPlate
-        self.buildDate = buildDate
-        
 class CarModel:
     def __init__(self, carNationality, carBrand, carModel ):
         self.carNationality = carNationality
@@ -40,6 +32,17 @@ class CarModel:
         self.carModel = carModel
     def getID(self):
         return F"{self.carBrand}_{self.carModel}".lower()
+
+
+class Car: 
+    def __init__(self, carColour, carBodyType, noPlate, buildDate, model: CarModel):
+        self.carColour = carColour
+        self.carBodyType = carBodyType
+        self.noPlate = noPlate
+        self.buildDate = buildDate
+        self.model = model
+    def __str__(self):
+        return f"{self.model.carBrand} {self.model.carModel} - {self.carColour} {self.carBodyType} ({self.noPlate})"
     
 
 class CarRegistry:
@@ -49,27 +52,33 @@ class CarRegistry:
         self.carRegistery.append(car)   
     def showRegister(self):
         for car in self.carRegistery:
-            print(f"Car Registery: {car.carBrand} {car.carMake} - {car.carColour} {car.carBodyType} {car.noPlate} {car.buildDate}")
+            print(f"Car Registry: {car}")
 
-
-
-print:("testuhh")
 
 class CarModelDataBase:
     def __init__(self):
         models = [
             CarModel("Gernany", "Audi", "TT"),
         ]
-        #Using a dictionary comprehension
+       
         self.models = {model.getID(): model for model in models   } 
+
 
 class ClientDataBase:
     def __init__(self):
-        clients = [
-            
-            
-        ]
- 
+        self.clients = []
+    def registerClient(self, client: Client):
+        self.clients.append(client)
+        
+    def showClients(self):
+        for client in self.clients:
+            print(f"{client.ClientID} - {client.name}")
+
+
+class LogbookEntry():
+    def __init__(self, notes, service_date):
+        self.notes = notes
+        self.service_date = service_date
 
  
 class Service:
@@ -77,21 +86,15 @@ class Service:
         self.car = car
         self.baseServicePrice = self.setBaseServicePrice()
         
-        
-class LogbookEntry():
-    def __init__(self, notes, service_date):
-        self.notes = notes
-        self.service_date = service_date
-    
-    def AddLog():
-        if newLog = None
+    def setBaseServicePrice(self):
+        if self.car.model.carBrand == "Audi":
+            return 500
+        else:
+            return 300
         
 
-    
-    
 
-
-car1 = Car("Grey", "SUV", "DGA99Y", "2008")
+car1 = Car("Grey", "Sedan", "DGA99Y", "2008")
 
 
 employee1 = Employee("Alice", "NSW123456")
