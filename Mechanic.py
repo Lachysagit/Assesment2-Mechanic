@@ -53,6 +53,8 @@ class CarRegistry:
 
 
 
+print:("testuhh")
+
 class CarModelDataBase:
     def __init__(self):
         models = [
