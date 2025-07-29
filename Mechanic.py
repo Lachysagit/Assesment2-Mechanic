@@ -79,7 +79,7 @@ class ClientDataBase:
         
     def showClients(self):
         for client in self.clients:
-            print(f"{client.ClientID} - {client.name}")
+            print(f"Client list: {client.ClientID} - {client.name}")
 
 
 class LogbookEntry():
@@ -133,7 +133,8 @@ def main():
     car_registry.registerCar(car)
 
     service = Service(car)
-    print(f"Service cost for {car.noPlate}: ${service.baseServicePrice}")
+    print("-----------------------------------------------------")
+    print(f"Service cost for { model_id } with number plate {car.noPlate}: ${service.baseServicePrice}")
 
     client_db.showClients()
     car_registry.showRegister()
