@@ -1,4 +1,5 @@
 
+
 class Person:   
     def __init__(self, name, driversLicense):
         self.name = name
@@ -56,12 +57,18 @@ class CarRegistry:
 
 
 class CarModelDataBase:
-    def __init__(self):
-        models = [
-            CarModel("Gernany", "Audi", "TT"),
-        ]
-       
-        self.models = {model.getID(): model for model in models   } 
+    def __init__(self, filename="car_models.txt"):
+        self.models = {}
+        try:
+            with open(filename, "r") as file:
+                for line in file:
+                    parts = line.strip().split("|")
+                    if len(parts) == 3:
+                        nationality, brand, model = parts
+                        car_model = CarModel(nationality, brand, model)
+                        self.models[car_model.getID()] = car_model 
+        except FileNotFoundError:
+            print(f"Error: Could not find file {filename}")
 
 
 class ClientDataBase:
@@ -91,16 +98,48 @@ class Service:
             return 500
         else:
             return 300
-        
 
 
-car1 = Car("Grey", "Sedan", "DGA99Y", "2008")
+def main():
+    model_db = CarModelDataBase("car_models.txt")
+    client_db = ClientDataBase()
+    car_registry = CarRegistry()
 
+    name = input("Enter client name: ")
+    license = input("Enter driver’s license number: ")
+    client = Client(name, license)
 
-employee1 = Employee("Alice", "NSW123456")
-client1 = Client("Elizabeth", "NSW1234")
+    print("Available car models:")
+    for key in model_db.models:
+        model = model_db.models[key]
+        print(f" - {model.carBrand} {model.carModel} ({key})")
 
- 
+    model_id = input("Enter car model ID (e.g. audi_tt): ")
+    car_model = model_db.models.get(model_id.lower())
 
-print(employee1.EmployeeID) 
-print(client1.ClientID)  
+    if not car_model:
+        print("Invalid car model ID. Try respelling")
+        return
+
+    colour = input("Enter car colour: ")
+    body_type = input("Enter car body type: ")
+    no_plate = input("Enter car number plate: ")
+    build_date = input("Enter build year: ")
+
+    car = Car(colour, body_type, no_plate, build_date, car_model)
+
+    client.addCar(car)
+    client_db.registerClient(client)
+    car_registry.registerCar(car)
+
+    service = Service(car)
+    print(f"Service cost for {car.noPlate}: ${service.baseServicePrice}")
+
+    client_db.showClients()
+    car_registry.showRegister()
+
+    employee = Employee("Alice", "NSW123456")  
+    print(f"Employee ID: {employee.EmployeeID}")
+    print(f"Client ID: {client.ClientID}")
+if __name__ == "__main__":
+    main()
