@@ -98,49 +98,41 @@ class Service:
             return 500
         else:
             return 300
+        
+        
+def run_demo():
+    name = input("Client name: ")
+    
+    while True:
+        license = input("License number (numbers only): ")
+        if license.isdigit():
+            break
+        print("❌ Retry (only use numbers)")
 
+    nationality = input("Car nationality: ")
+    brand = input("Car brand: ")
+    model_name = input("Car model: ")
 
-def main():
-    model_db = CarModelDataBase("car_models.txt")
-    client_db = ClientDataBase()
-    car_registry = CarRegistry()
+    colour = input("Car colour: ")
+    body_type = input("Body type: ")
+    no_plate = input("Plate number: ")
+    build_date = input("Build year: ")
 
-    name = input("Enter client name: ")
-    license = input("Enter driver’s license number: ")
     client = Client(name, license)
-
-    print("Available car models:")
-    for key in model_db.models:
-        model = model_db.models[key]
-        print(f" - {model.carBrand} {model.carModel} ({key})")
-
-    model_id = input("Enter car model ID (e.g. audi_tt): ")
-    car_model = model_db.models.get(model_id.lower())
-
-    if not car_model:
-        print("Invalid car model ID. Try respelling")
-        return
-
-    colour = input("Enter car colour: ")
-    body_type = input("Enter car body type: ")
-    no_plate = input("Enter car number plate: ")
-    build_date = input("Enter build year: ")
-
+    car_model = CarModel(nationality, brand, model_name)
     car = Car(colour, body_type, no_plate, build_date, car_model)
 
     client.addCar(car)
-    client_db.registerClient(client)
-    car_registry.registerCar(car)
+    ClientDataBase().registerClient(client)
+    CarRegistry().registerCar(car)
 
     service = Service(car)
     print("-----------------------------------------------------")
-    print(f"Service cost for { model_id } with number plate {car.noPlate}: ${service.baseServicePrice}")
-
-    client_db.showClients()
-    car_registry.showRegister()
-
-    employee = Employee("Alice", "NSW123456")  
-    print(f"Employee ID: {employee.EmployeeID}")
+    print(f"Service cost: ${service.baseServicePrice}")
     print(f"Client ID: {client.ClientID}")
-if __name__ == "__main__":
-    main()
+    print(f"Employee ID: {Employee('Alice', '234567').EmployeeID}")
+    
+    
+def main():
+    run_demo()
+    
