@@ -140,7 +140,7 @@ def run_demo(db):
     service = Service(car)
     print("-----------------------------------------------------")
     print(f"Service cost: ${service.baseServicePrice}")
-    print(f"Client Assigned and Employee ID: {client.ClientID}")
+    print(f"Client Assigned and Client ID: {client.ClientID}")
     print(f"Employee ID: {Employee('Alice', '234567').EmployeeID}")
     
     
