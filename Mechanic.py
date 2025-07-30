@@ -7,6 +7,7 @@ class Person:
     def getID(self):
         raise NotImplementedError()
     
+    
 class Employee(Person):
     def __init__(self, name, driversLicense):
         super().__init__(name, driversLicense)
@@ -100,7 +101,7 @@ class Service:
             return 300
         
         
-def run_demo():
+def run_demo(db):
     name = input("Client name: ")
     
     while True:
@@ -111,7 +112,17 @@ def run_demo():
 
     nationality = input("Car nationality: ")
     brand = input("Car brand: ")
-    model_name = input("Car model: ")
+    model_name = input("Car model (e.g CX-5, RAV4): ")
+    
+    model_id = f"{brand}_{model_name}".lower()
+    
+    if model_id in db.models:
+        car_model = db.models[model_id]
+        print("✅ Model loaded from database.")
+   
+    else:
+        print("⚠️ Model not found. Creating new entry.")
+        car_model = CarModel(nationality, brand, model_name)
 
     colour = input("Car colour: ")
     body_type = input("Body type: ")
@@ -129,10 +140,15 @@ def run_demo():
     service = Service(car)
     print("-----------------------------------------------------")
     print(f"Service cost: ${service.baseServicePrice}")
-    print(f"Client ID: {client.ClientID}")
+    print(f"Client Assigned and Employee ID: {client.ClientID}")
     print(f"Employee ID: {Employee('Alice', '234567').EmployeeID}")
     
     
 def main():
-    run_demo()
+   db = CarModelDataBase()
+   run_demo(db)
+
+if __name__ == "__main__":
+    main()
+    
     
