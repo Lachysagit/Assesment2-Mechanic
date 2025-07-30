@@ -1,0 +1,124 @@
+
+Germany|Audi|TT
+Germany|BMW|3 Series
+Japan|Toyota|Camry
+USA|Ford|Mustang
+South Korea|Hyundai|Elantra
+Italy|Ferrari|Roma
+France|Peugeot|208
+UK|Mini|Cooper
+Sweden|Volvo|XC90
+Czech Republic|Skoda|Octavia
+Germany|Mercedes-Benz|C-Class
+Germany|Volkswagen|Golf
+Germany|Porsche|911
+USA|Chevrolet|Impala
+USA|Tesla|Model S
+USA|Dodge|Charger
+Japan|Honda|Civic
+Japan|Nissan|Altima
+Japan|Mazda|CX-5
+South Korea|Kia|Sportage
+South Korea|Genesis|G70
+UK|Jaguar|XF
+UK|Land Rover|Discovery
+Italy|Fiat|500
+Italy|Lamborghini|Huracán
+France|Renault|Clio
+France|Citroën|C5 Aircross
+Sweden|Volvo|XC60
+Australia|Holden|Commodore
+Czech Republic|Skoda|Superb
+Japan|Toyota|RAV4
+USA|Ford|Ranger
+Japan|Toyota|Hilux
+Japan|Isuzu|D-Max
+Japan|Mitsubishi|Outlander
+USA|Ford|Everest
+Japan|Toyota|Corolla
+China|MG|ZS
+USA|Tesla|Model Y
+South Korea|Hyundai|Tucson
+Japan|Mazda|CX-3
+Japan|Mitsubishi|Triton
+Japan|Isuzu|MU-X
+Japan|Nissan|X-Trail
+South Korea|Hyundai|Kona
+USA|Tesla|Model 3
+South Korea|Kia|Cerato
+Japan|Toyota|LandCruiser
+Japan|Mazda|BT-50
+China|GWM|Haval Jolion
+Japan|Subaru|Forester
+South Korea|Hyundai|i30
+Japan|Mazda|CX-30
+China|MG|MG3
+Japan|Mitsubishi|ASX
+Japan|Toyota|LC70
+Japan|Subaru|Crosstrek
+Japan|Mazda|3
+Japan|Subaru|Outback
+South Korea|Kia|Carnival
+Japan|Nissan|Navara
+Japan|Toyota|Kluger
+Japan|Toyota|Prado
+South Korea|Kia|Sorento
+Japan|Suzuki|Jimny
+Japan|Mitsubishi|Eclipse Cross
+China|GWM|Haval H6
+Japan|Toyota|Corolla Cross
+Germany|Volkswagen|Amarok
+Japan|Nissan|Patrol
+Japan|Toyota|Yaris Cross
+China|GWM|Ute
+Germany|Volkswagen|T-Roc
+Japan|Mitsubishi|Pajero Sport
+South Korea|Hyundai|Venue
+China|MG|MG4
+Japan|Nissan|Qashqai
+China|BYD|Seal
+China|LDV|T60
+China|BYD|Sealion 6
+South Korea|Kia|Stonic
+China|Chery|Omoda 5
+Japan|Suzuki|Swift
+Japan|Honda|CR-V
+Japan|Honda|HR-V
+Germany|Audi|Q3
+South Korea|Hyundai|Santa Fe
+Japan|Mazda|2
+Germany|Volkswagen|Tiguan
+China|MG|HS
+Germany|BMW|X1
+Germany|Mercedes-Benz|GLC
+Germany|Volkswagen|Tiguan Allspace
+Japan|Honda|ZR-V
+Japan|Mazda|CX-60
+China|GWM|Tank 300
+China|GWM|Haval H6 GT
+Germany|BMW|X3
+Germany|Porsche|Macan
+USA|Ram|1500
+UK|Land Rover|Defender
+South Korea|SsangYong|Musso
+Germany|BMW|X5
+Sweden|Volvo|XC40
+Germany|Mercedes-Benz|GLA
+South Korea|Hyundai|Palisade
+Japan|Toyota|Fortuner
+Japan|Suzuki|Vitara
+Japan|Toyota|C-HR
+Germany|Audi|Q5
+China|Chery|Tiggo 7 Pro
+Japan|Mazda|CX-8
+USA|Ford|F-150
+USA|Chevrolet|Silverado
+Germany|Audi|A3
+China|LDV|D90
+Japan|Toyota|Yaris
+UK|Range Rover|Sport
+Japan|Subaru|WRX
+Germany|Volkswagen|Polo
+Sweden|Volvo|EX30
+China|BYD|Dolphin
+USA|Chevrolet|Corvette
