@@ -30,6 +30,17 @@ This allowed me to use a subprogram/method before its logic had actually been co
 
 This while statement starts an infinte loop that ensures a valid license number is inputted, it requires a number string to pass the check and exit the loop with break, otherwise you will be asked to retry with a valid input.
 
-- ease of maintenance
-- version control
-- regular backup
+
+
+- ease of maintenance:
+  Code is organised into clearly defined classes and subprograms, inheritance is simple and clear, and code is easy to understand. Data and attributes are privatised and encapsulated so they cant be directly accessed outside of their intended class. All of this increases ease of maintenance and modularity.
+
+
+
+- version control:
+Evolution of code can be seen through gtihub commits, I can track changes, read commit messages and revert to previously working code if needed. Relevant text files are stored in github so I can see what external data is used.
+
+
+
+- regular backup:
+  By storing code and pushing to github, I have a safe backup of code even if I was to lose my files or vscode project,
