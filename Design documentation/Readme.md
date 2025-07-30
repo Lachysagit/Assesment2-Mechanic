@@ -1,7 +1,8 @@
 Include the following in this file or folder:
 
-- DFD – draw a DFD showing the designed external entities, internal processes, methods or
-algorithms and data stores as well as any data flowing between them
+- DFD
+  <img width="1659" height="1188" alt="image" src="https://github.com/user-attachments/assets/e32597c5-70f8-4777-ab9b-69263f789305" />
+
 
 
 
@@ -33,9 +34,7 @@ END
 
 
 
-- Test data – show a table of test data used to test an algorithm or method, each with its
-reason for inclusion for an algorithm or method
-
+- Test data –  see file commited to design documentation
 
 
 - Class diagram – show the planned class and inheritance hierarchy with attributes and
