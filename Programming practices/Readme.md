@@ -33,8 +33,7 @@ This while statement starts an infinte loop that ensures a valid license number 
 
 
 - ease of maintenance:
-  Code is organised into clearly defined classes and subprograms, inheritance is simple and clear, and code is easy to understand. Data and attributes are privatised and encapsulated so they cant be directly accessed outside of their intended class. All of this increases ease of maintenance and modularity.
-
+Code is organised into clearly defined classes and subprograms, inheritance is simple and clear, and code is easy to understand. Data and attributes are privatised and encapsulated so they cant be directly accessed outside of their intended class. All of this increases ease of maintenance and modularity. Stubs can easily be implemented to debug and maintain code too.
 
 
 - version control:
@@ -43,4 +42,4 @@ Evolution of code can be seen through gtihub commits, I can track changes, read 
 
 
 - regular backup:
-  By storing code and pushing to github, I have a safe backup of code even if I was to lose my files or vscode project,
+  By storing code and pushing to github, I have a safe backup of code even if I was to lose my files or vscode project. I also copied and saved my entire project to another seperate folder for extra caution.
