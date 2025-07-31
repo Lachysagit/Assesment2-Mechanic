@@ -21,7 +21,7 @@ Include the following in this file or folder:
 
 
 
-- Flowchart – draw a flowchart of a planned algorithm or method
+- Flowchart –  see file commited to design documentation
 
 
 
