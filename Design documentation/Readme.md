@@ -13,12 +13,9 @@ Include the following in this file or folder:
 
 
   
-- Pseudocode –
+- Pseudocode –  see file commited to design documentation
 
-getID()
-    name_initials ← first 2 letters of name in uppercase
-    RETURN "E-" + name_initials + driversLicense
-END
+
 
 <img width="797" height="80" alt="image" src="https://github.com/user-attachments/assets/28c03950-2bb1-4a60-a910-4361f7695a85" />
 
