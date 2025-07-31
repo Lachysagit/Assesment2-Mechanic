@@ -37,5 +37,4 @@ END
 - Test data –  see file commited to design documentation
 
 
-- Class diagram – show the planned class and inheritance hierarchy with attributes and
-methods for all classes
+- Class diagram – see file commited to design documentation
